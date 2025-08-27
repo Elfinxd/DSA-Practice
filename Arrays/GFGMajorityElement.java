@@ -32,6 +32,9 @@ public class GFGMajorityElement {
         
         // }
         // return l;
+
+        
+        //Moore's Voting Algorithm
         int ele1 = -1, ele2 = -1;
         int cnt1 = 0, cnt2 = 0;
         for(int i = 0; i<arr.length; i++)
