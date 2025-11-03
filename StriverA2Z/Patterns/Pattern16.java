@@ -22,7 +22,7 @@ public class Pattern16 {
                 System.out.print(ch);
             }
             System.out.println();
-            ch++;
+            ch++;   
         }
         }
 }
