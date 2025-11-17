@@ -1,4 +1,4 @@
-package StriverA2Z.BASICS;
+package StriverA2Z.Recursion;
 import java.util.*;
 public class Linearprint {
     public static void main(String[] args) {
