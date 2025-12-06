@@ -4,7 +4,7 @@
     {
       "label": "Compile and Push",
       "type": "shell",
-      "command": "echo \"Compiling: ${fileBasename}\"; javac -d out \"${file}\" || exit 1; git add .; if ! git diff --cached --quiet; then git commit -m \"Added : ${fileBasename}\"; git push; else echo \"No changes to commit.\"; fi",
+      "command": "if [[ \"${fileExtname}\" == \".java\" ]]; then echo \"Compiling: ${fileBasename}\" && javac -d out \"${file}\" || exit 1; else echo \"Skipping compile (not a .java file): ${fileBasename}\"; fi && git stash push -m tempstash && git pull --rebase && git stash pop || true && git add . && if ! git diff --cached --quiet; then git commit -m \"Added ${fileBasename}\" && git push; else echo \"No changes to commit.\"; fi",
       "options": {
         "shell": {
           "executable": "C:\\Program Files\\Git\\bin\\bash.exe",

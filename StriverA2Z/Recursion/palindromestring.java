@@ -7,7 +7,7 @@ public class palindromestring {
         String s = sc.next();
         int n = s.length();
         if(!palindrome(s, 0, n))
-        System.out.println("Not palindrome!");
+        System.out.println("Not a palindrome!");
         else
         System.out.println("Palindrome!");
     }
